@@ -12,9 +12,9 @@ github.onclick = function() {
 }
 
 report.onclick = function() {
-    window.open('', '_blank');
+    window.open('https://drive.google.com/file/d/13oyeybDdbgChkfxSMUWKr2jwFOspYcFn/view?usp=sharing', '_blank');
 }
 
 demo.onclick = function() {
-    window.open('', '_blank');
+    window.open('https://drive.google.com/file/d/1btl43ehCS_dbowjkGBdJhtcm0Zzc3d40/view?usp=sharing', '_blank');
 }
