@@ -1,4 +1,4 @@
-.mindscan-section {
+.bugscope-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,16 +8,16 @@
     margin-top: 200px;
 }
 
-.mindscan-title {
+.bugscope-title {
     font-size: 40px;
     font-weight: 700;
     color: white;
 }
 
-.mindscan-description {
+.bugscope-description {
     font-size: 20px;    
     color: rgb(160, 160, 160);
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     width: 800px;
 }
 
@@ -30,11 +30,25 @@
     width: 100%;
 }
 
+.bugscope-textarea {
+    background: none;
+    border: 3px solid var(--primary-dark-hover);
+    font-size: 15px;
+    padding: 10px;
+    border-radius: var(--primary-border-radius);
+    outline: none;
+    min-height: 200px;
+    width: 500px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: vertical;
+}
+
 .drop-area {
     position: relative;
-    height: 100px;
-    width: 500px;
-    border: 7px dashed gray;
+    height: 80px;
+    width: 400px;
+    border: 4px dashed gray;
     border-radius: 30px;
     cursor: pointer;
 }
@@ -49,7 +63,7 @@
 .upload-span {
     transform: translate(-50%, -50%);
     color: var(--primary-gray);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     position: absolute;
     left: 50%;
@@ -72,7 +86,7 @@
 }
 
 .prediction-span, .confidence-span {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
     color: rgb(73, 240, 123);
 }
@@ -118,11 +132,11 @@ option {
 }
 
 @media only screen and (max-width: 800px) {
-    .mindscan-section, .result-container {
+    .bugscope-section, .result-container {
         width: 90%;
     }
 
-    .mindscan-description {
+    .bugscope-description {
         width: 80%;
     }
 }
@@ -136,7 +150,7 @@ option {
         gap: 5px;
     }
 
-    .mindscan-select {
+    .bugscope-select {
         width: 150px;
         font-size: 15px;
     }
@@ -145,11 +159,15 @@ option {
         width: 100%;
     }
 
-    .mindscan-title {
+    .bugscope-title {
         font-size: 30px;
     }
 
-    .mindscan-description {
+    .bugscope-description {
         font-size: 18px;
+    }
+
+    .bugscope-textarea {
+        width: 95%;
     }
 }

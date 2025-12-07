@@ -1,36 +1,40 @@
 const file_input = document.querySelector('.file-input');
-const preview_image = document.querySelector('.preview-image');
 const analyse = document.querySelector('.analyse');
 const result_container = document.querySelector('.result-container');
 const prediction_value = document.querySelector('.prediction-value');
 const confidence_value = document.querySelector('.confidence-value');
-const header_text = document.querySelector('.header-text');
+const bugscope_textarea = document.querySelector('.bugscope-textarea');
 
-file_input.onchange = function(event) {
-    const file = event.target.files[0];
-    if (file && file.type.startsWith("image/")) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            preview_image.src = e.target.result;
-            preview_image.style.display = 'flex'; 
-        };
-        reader.readAsDataURL(file);
+const fileInput = document.querySelector('.file-input');
+const uploadSpan = document.querySelector('.upload-span');
+
+fileInput.addEventListener('change', () => {
+    const files = Array.from(fileInput.files);
+    if (files.length === 0) {
+        uploadSpan.textContent = "UPLOAD CODE FILES";
+    } else if (files.length === 1) {
+        uploadSpan.textContent = files[0].name;
+    } else {
+        uploadSpan.textContent = `${files.length} files selected`;
     }
-};
+});
 
 analyse.onclick = function() {
-    alert('The model is not hosted yet, you may wanna see the demo as well?');
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    return;
+    const files = file_input.files;
+    const codeText = bugscope_textarea.value.trim();
 
-    const file = file_input.files[0];
-    if (!file) return;
+    if (!files.length && !codeText) {
+        alert("Please upload a file or paste code in the textarea.");
+        return;
+    }
 
     analyse.disabled = true;
-    analyse.textContent = "Analysing...";
+    analyse.textContent = "Analyzing...";
 
     const formData = new FormData();
-    formData.append('image', file);
+
+    for (let i = 0; i < files.length; i++) {formData.append('files', files[i]);}
+    if (codeText) {formData.append('code_text', codeText);}
 
     fetch('http://127.0.0.1:5000/predict', {
         method: 'POST',
@@ -38,25 +42,22 @@ analyse.onclick = function() {
     })
     .then(response => response.json())
     .then(data => {
-        if (data.binary_prediction === "normal") {
-            prediction_value.textContent = "Normal";
-            confidence_value.textContent = (data.binary_confidence * 100).toFixed(2) + "%";
-        } else {
-            prediction_value.textContent = data.multi_prediction;
-            confidence_value.textContent = (data.multi_confidence * 100).toFixed(2) + "%";
+        if (data.success) {
+            prediction_value.textContent = data.prediction;
+            confidence_value.textContent = data.confidence.toFixed(2) + "%";
+            result_container.style.display = "block";
         }
-        result_container.style.display = 'flex';
-        analyse.textContent = "Analyse";
-        analyse.disabled = false;
+        else {
+            console.error("Error:", error);
+            alert("Prediction failed. Please try again.");    
+        }
     })
     .catch(error => {
         console.error("Error:", error);
-        analyse.textContent = "Analyse";
-        analyse.disabled = false;
+        alert("Error with the server. Please try again.");
     })
     .finally(() => {
         analyse.disabled = false;
         analyse.textContent = "Analyze";
-        analyse.disabled = false;
     });
 };
