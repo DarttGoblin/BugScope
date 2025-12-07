@@ -13,7 +13,7 @@ const social_media = [
 ]
 
 professor.onclick = function() {
-    window.open('', '_blank');
+    window.open('https://www.linkedin.com/in/soukaina-mjahed-2b9a6027/', '_blank');
 }
 
 footer_body_info.forEach((info, index) => {

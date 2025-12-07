@@ -8,13 +8,13 @@ upload.onclick = function() {
 }
 
 github.onclick = function() {
-    window.open('https://github.com/DarttGoblin/MindScan_server', '_blank');
+    window.open('https://github.com/DarttGoblin/BugScope_server', '_blank');
 }
 
 report.onclick = function() {
-    window.open('https://drive.google.com/file/d/1hHuaAL8Vrvy9b5-YwqnhjgU78d-1oQCD/view?usp=sharing', '_blank');
+    window.open('', '_blank');
 }
 
 demo.onclick = function() {
-    window.open('https://drive.google.com/file/d/1_j0gD5WEaxMWhIlNMnhSUcaUbxzzOeMU/view?usp=sharing', '_blank');
+    window.open('', '_blank');
 }

@@ -1,8 +1,8 @@
 :root {
-    --primary-color: rgb(145, 34, 235);
-    --primary-hover: rgb(121, 28, 197);
-    --primary-dark-hover: rgb(72, 10, 123);
-    --primary-light-hover: rgb(191, 112, 255);
+    --primary-color: rgb(55, 212, 89);
+    --primary-hover: rgb(32, 143, 56);
+    --primary-dark-hover: rgb(15, 99, 33);
+    --primary-light-hover: rgb(143, 255, 167);
     --primary-gray: rgb(150, 150, 150);
     --primary-transition: 0.3s;
     --primary-border-radius: 10px;
