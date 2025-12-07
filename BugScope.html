@@ -1,0 +1,243 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="MindScan.Media/logo.png">
+    <link rel="stylesheet" href="MindScan.css">
+    <link rel="stylesheet" href="MindScan.Styles/Nav.css">
+    <link rel="stylesheet" href="MindScan.Styles/Home.css">
+    <link rel="stylesheet" href="MindScan.Styles/MindScan.css">
+    <link rel="stylesheet" href="MindScan.Styles/About.css">
+    <link rel="stylesheet" href="MindScan.Styles/Footer.css">
+    <title>MindScan</title>
+</head>
+<body>
+    <nav class="nav-section">
+        <div class="nav-logo-container">
+            <img class="nav-logo" src="MindScan.Media/logo.png">
+        </div>
+        <div class="nav-links-container">
+            <span class="nav-link">HOME</span>
+            <span class="nav-link">MINDSCAN</span>
+            <span class="nav-link">ABOUT</span>
+        </div>
+        <button class="sign-in">Sign in</button>
+
+        <div class="settings">
+            <div class="settings-line"></div>
+            <div class="settings-line"></div>
+            <div class="settings-line"></div>
+        </div>
+
+        <div class="responsive-nav">
+            <div class="responsive-nav-logo-container">
+                <img class="responsive-nav-logo" src="MindScan.Media/logo.png">
+                <i class="closing-icon fa fa-times"></i>
+            </div>
+
+            <div class="responsive-nav-links-container">
+                <span class="responsive-nav-link">HOME</span>
+                <span class="responsive-nav-link">MINDSCAN</span>
+                <span class="responsive-nav-link">ABOUT</span>
+            </div>
+
+            <button class="responsive-sign-in">Sign in</button>
+        </div>
+    </nav>
+    
+    <section class="home-section">
+        <div class="home-header">
+            <div class="header-text">
+                <span class="header-span">Analyze Brain MRI Scans<br>with AI-Powered Precision<br>using MindScan</span>
+                <div class="home-buttons-container">
+                    <button class="home-buttons upload">Upload MRI</button>
+                    <button class="home-buttons github">Github Repo</button>
+                    <button class="home-buttons report">Read Report</button>
+                    <button class="home-buttons demo">See Demo</button>
+                </div>
+            </div>            
+            <div class="header-picture-container">
+                <img class="header-picture" src="MindScan.Media/Home.Media/analysis.png">
+            </div>
+        </div>
+
+        <div class="home-text-content">
+            <span class="home-text-title">AI-Powered Brain MRI Analysis with MindScan</span>
+            <span class="home-text-description">
+                MindScan assists medical professionals and researchers in detecting brain anomalies such as tumors 
+                or lesions from MRI scans. It uses deep learning and advanced image preprocessing to highlight 
+                suspicious regions and improve diagnostic efficiency.
+            </span>
+            <div class="home-images-container">
+                <div class="home-image-container">
+                    <img class="home-image" src="MindScan.Media/Home.Media/preprocessing.png">
+                    <span class="home-image-title">Intelligent Preprocessing</span>
+                    <span class="home-image-description">Enhancement of MRI scans for clearer visualization.</span>
+                </div>
+                <div class="home-image-container">
+                    <img class="home-image" src="MindScan.Media/Home.Media/segmentation.png">
+                    <span class="home-image-title">Smart Segmentation</span>
+                    <span class="home-image-description">AI-based segmentation to highlight potential tumor or lesion areas.</span>
+                </div>
+                <div class="home-image-container">
+                    <img class="home-image" src="MindScan.Media/Home.Media/accuracy.png">
+                    <span class="home-image-title">Accurate Insights</span>
+                    <span class="home-image-description">Get confidence scores and visual overlays for each MRI slice analyzed.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mindscan-section">
+        <div class="benefit-title-container">
+            <span class="mindscan-title">MindScan</span>
+            <img class="benefits-image" src="MindScan.Media/logo.png">
+        </div>
+        <span class="mindscan-description">
+            Upload a brain MRI image and let MindScan analyze it using AI. The system preprocesses, detects, 
+            and visualizes potential abnormalities to assist radiologists and researchers in diagnostic evaluation.
+        </span>
+        <div class="input-container">
+            <div class="drop-area">
+                <span class="upload-span">UPLOAD MRI IMAGE</span>
+                <input class="file-input" type="file" accept="image/png, image/jpeg, image/jpg">
+            </div>
+        </div>
+        <img class="preview-image">
+        <button class="analyse">Analyze</button>
+        <div class="result-container">
+            <span class="prediction-span">Diagnosis Result: <span class="prediction-value">Normal</span></span>
+            <span class="confidence-span">Confidence: <span class="confidence-value">88%</span></span>
+        </div>
+    </section>    
+
+    <section class="about-section">
+        <div class="benefits">
+            <div class="benefit-title-container">
+                <span class="benefits-title">Benefits</span>
+                <img class="benefits-image" src="MindScan.Media/About.Media/benefits.png">
+            </div>
+            <div class="benefits-container">
+                <div class="benefits-row">
+                    <div class="benefit-container">
+                        <span class="benefit-title">AI-Assisted Diagnosis</span>
+                        <span class="benefit-description">
+                            MindScan detect and segment brain abnormalities with high accuracy, 
+                            assisting radiologists in early diagnosis.
+                        </span>
+                    </div>
+                    <div class="benefit-container">
+                        <span class="benefit-title">Fast and Reliable</span>
+                        <span class="benefit-description">
+                            Automatically processes MRI scans and returns diagnostic insights in seconds, 
+                            accelerating clinical decision-making.
+                        </span>
+                    </div>
+                </div>
+                <div class="benefits-row">
+                    <div class="benefit-container">
+                        <span class="benefit-title">Enhanced Visualization</span>
+                        <span class="benefit-description">
+                            Highlighted tumor regions and heatmaps help visualize AI detections for clear interpretation.
+                        </span>
+                    </div>
+                    <div class="benefit-container">
+                        <span class="benefit-title">Research and Development</span>
+                        <span class="benefit-description">
+                            Supports medical AI research with adaptable models and transparent preprocessing techniques.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <div class="usecases">
+            <div class="usecases-title-container">
+                <span class="usecases-title">Use Cases</span>
+                <img class="usecases-image" src="MindScan.Media/About.Media/usecase.png">
+            </div>
+            <span class="usecases-description">Explore how MindScan supports medical imaging and diagnostic research.</span>
+            <div class="usecase-main-row">
+                <div class="usecase-sub-row">
+                    <div class="usecase-icon-container">
+                        <img class="usecase-icon" src="MindScan.Media/About.Media/radiology.png">
+                        <span class="usecase-icon-title">Hospital Radiology</span>
+                        <span class="usecase-icon-description">Assist doctors in detecting brain tumors faster and more accurately.</span>
+                    </div>
+                    <div class="usecase-icon-container">
+                        <img class="usecase-icon" src="MindScan.Media/About.Media/research.png">
+                        <span class="usecase-icon-title">Medical Research</span>
+                        <span class="usecase-icon-description">Facilitate research on MRI-based brain disease detection and segmentation models.</span>
+                    </div>
+                </div>
+                <div class="usecase-sub-row">
+                    <div class="usecase-icon-container">
+                        <img class="usecase-icon" src="MindScan.Media/About.Media/education.png">
+                        <span class="usecase-icon-title">Education & Training</span>
+                        <span class="usecase-icon-description">Help students learn how AI analyzes MRI scans and visualizes results.</span>
+                    </div>
+                    <div class="usecase-icon-container">
+                        <img class="usecase-icon" src="MindScan.Media/About.Media/ai.png">
+                        <span class="usecase-icon-title">AI<br>Development</span>
+                        <span class="usecase-icon-description">Provide a testing ground for improving medical imaging and preprocessing techs.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="footer-head">
+            <div class="lets-talk-container">
+                <span class="lets-talk-title">Let’s talk</span>
+                <span class="lets-talk-sub-title">Have a question or suggestion? Get in touch.</span>
+                <button class="lets-talk-contact-btn">Contact</button>
+            </div>
+            <div class="quick-links-container">
+                <span class="quick-links-title">Quick Links</span>
+                <div class="quick-links-sub-container">
+                    <span class="quick-link">MindScan Features</span>
+                    <span class="quick-link">Research Papers</span>
+                    <span class="quick-link">Contact Us</span>
+                    <span class="quick-link">Blog</span>
+                </div>
+                <div class="footer-icons-container">
+                    <i class="footer-icon fab fa-facebook"></i>
+                    <i class="footer-icon fab fa-instagram"></i>
+                    <i class="footer-icon fab fa-linkedin"></i>
+                    <i class="footer-icon fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="fssm-container">
+                <img class="fssm-logo" src="MindScan.Media/fssm-logo-no-bg.png" alt="university-logo">
+                <span class="fssm-text">This project was supervised by the professor <span class="professor">Issam Qaffou</span><br>at the Faculty of Science Semlalia.</span>
+            </div>
+            <div class="future-info">
+                <span class="future-info-title">Where the Future Begins</span>
+                <div class="info-container">
+                    <span class="footer-body-info">Avenue Prince Moulay Abdellah, B.P. 511, Marrakesh, Morocco</span>
+                    <span class="footer-body-info">https://www.linkedin.com/in/yassine-bazgour-178b73305/</span>
+                    <span class="footer-body-info">https://www.linkedin.com/in/zahra-abouhane-27b8b218a/</span>
+                    <span class="footer-body-info">yassine.bazgour@gmail.com</span>
+                    <span class="footer-body-info">abouhanezahra@gmail.com</span>
+                    <span class="footer-body-info">mindscan@gmail.com</span>
+                    <span class="footer-body-info">+212 638 659 880</span>
+                    <span class="footer-body-info">+212 700 485 361</span>
+                </div>
+                <button class="footer-body-support-btn">Support us</button>
+                <a class="story-set" href="https://storyset.com/people" target="_blank" rel="noopener noreferrer">People illustrations by Storyset</a>
+                <a class="story-set" href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Icon design by flaticon</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="MindScan.Scripts/Nav.js"></script>
+    <script src="MindScan.Scripts/Footer.js"></script>
+    <script src="MindScan.Scripts/Home.js"></script>
+    <script src="MindScan.Scripts/About.js"></script>
+    <script src="MindScan.js"></script>
+</body>
